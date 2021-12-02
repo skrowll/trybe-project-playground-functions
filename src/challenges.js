@@ -84,12 +84,25 @@ function fizzBuzz(numbers) {
 //console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  let newtext = text.replace(/a/g, "1");
+  newtext = newtext.replace(/e/g, "2");
+  newtext = newtext.replace(/i/g, "3");
+  newtext = newtext.replace(/o/g, "4");
+  newtext = newtext.replace(/u/g, "5");
+
+  return newtext;
 }
-function decode() {
-  // seu código aqui
+function decode(text) {
+  let newtext = text.replace(/1/g, "a");
+  newtext = newtext.replace(/2/g, "e");
+  newtext = newtext.replace(/3/g, "i");
+  newtext = newtext.replace(/4/g, "o");
+  newtext = newtext.replace(/5/g, "u");
+
+  return newtext;
 }
+//console.log(decode("l5c1s"));
 
 module.exports = {
   calcArea,
