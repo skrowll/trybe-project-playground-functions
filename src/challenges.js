@@ -48,6 +48,7 @@ function highestCount(numbers) {
   return count;
 }
 //console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+//.reverse(); encontrado no 3wschools.
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -62,12 +63,25 @@ function catAndMouse(mouse, cat1, cat2) {
   }
 }
 //console.log(catAndMouse(1, 0, 2));
-//Math.abs() encontrado no 3wschools.
+//Math.abs(); encontrado no 3wschools.
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let resultado = [];
+  for (let index = 0; index < numbers.length; index ++) {
+      if ((numbers[index] % 3) === 0 && (numbers[index] % 5) !== 0) {
+          resultado.push("fizz");
+      } else if ((numbers[index] % 5) === 0 && (numbers[index] % 3) !== 0){
+          resultado.push("buzz");
+      } else if ((numbers[index] % 5) === 0 && (numbers[index] % 3) === 0){
+        resultado.push("fizzBuzz");
+      } else if ((numbers[index] % 5) !== 0 && (numbers[index] % 3) !== 0){
+        resultado.push("bug!");
+      }
+  }
+  return resultado;
 }
+//console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
