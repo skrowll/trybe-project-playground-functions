@@ -34,9 +34,20 @@ function footballPoints(wins, ties) {
 //console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
-
+function highestCount(numbers) {
+  numbers.sort();
+  if (numbers[numbers.length -1] < 0) {
+    numbers.reverse();
+  }
+  let count = 0;
+  for (let index = 0; index < numbers.length; index++) {
+    if (numbers[index] === numbers[numbers.length - 1]) {
+      count ++;
+    }
+  }
+  return count;
 }
+//console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -50,7 +61,8 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
-console.log(catAndMouse(1, 0, 2));
+//console.log(catAndMouse(1, 0, 2));
+//Math.abs() encontrado no 3wschools.
 
 // Desafio 8
 function fizzBuzz() {
