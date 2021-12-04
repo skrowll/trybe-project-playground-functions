@@ -50,9 +50,22 @@ function triangleCheck(lineA, lineB, lineC) {
 //console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(text) {
+  let numbers = text.match(/\d+/g);
+  let sum = 0;
+  let message = "";
+  for (let index = 0; index < numbers.length; index ++) {
+    sum = sum + parseInt(numbers[index]);
+  }
+  if (sum === 1){
+    message = (sum + " copo de água");
+  } else if (sum > 1){
+    message = (sum + " copos de água");
+  }
+  return message;
 }
+//console.log(hydrate("2 cachaça, 5 cervejas e 1 copo de vinho"));
+//Solução retirada do stackoverflow (https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994)
 
 module.exports = {
   generatePhoneNumber,
